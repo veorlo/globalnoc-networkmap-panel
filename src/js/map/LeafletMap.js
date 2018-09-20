@@ -112,8 +112,7 @@ var LeafletMap = function(params) {
     if(!imageOverlayURL){
         tiles = L.tileLayer(mapTileURL, { attribution: '&copy GlobalNOC' }) 
         lmap.addLayer(tiles); 
-    }else {
-        lmap.options.minZoom = 3;
+    } else {
         var bounds = lmap.getBounds();
         lmap.setMaxBounds(bounds);
         image = new L.ImageOverlay(imageOverlayURL, bounds, {
@@ -156,7 +155,6 @@ var LeafletMap = function(params) {
         });
         image.bringToBack();
         lmap.addLayer(image);
-        lmap.options.minZoom = 3;
     }
 
     //setup our svg layer to drawn on
