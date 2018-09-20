@@ -115,8 +115,8 @@ var LeafletMap = function(params) {
     } else {
         var bounds = lmap.getBounds();
         lmap.setMaxBounds(bounds);
+        lmap.options.maxZoom = 18;
         image = new L.ImageOverlay(imageOverlayURL, bounds, {
-            lmap.options.maxZoom = 18;
             interactive: true,
             opacity: 1,
             zIndex: -999
